@@ -4,10 +4,17 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vite.dev/config/
 export default defineConfig({
+
+  publicDir: './',
+
   plugins: [react(), svgr()],
 
   server: {
     host: true,
+  },
+
+  build: {
+    emptyOutDir: true,
   }
 
 })
