@@ -1,0 +1,170 @@
+$primary-purple: hsl(259, 100%, 65%);
+
+$off-black: hsl(0, 0%, 8%);
+$smokey-grey: hsl(0, 1%, 44%);
+$light-grey: hsl(0, 0%, 86%);
+
+#root {
+  margin: 0 auto;
+}
+
+.card {
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2em;
+  width: 600px;
+  height: 500px;
+  background-color: white;
+  border-radius: 1em 1em 10em 1em;
+
+  form {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2em;
+
+    div {
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+
+      label {
+          color: $smokey-grey;
+          font-weight: bold;
+          letter-spacing: 0.1rem;
+      }
+
+      input {
+        background-color: white;
+
+        border: 0.02em solid $light-grey;
+        border-radius: 0.25em;
+
+        color: $smokey-grey;
+        font-size: 32px;
+        font-weight: bold;
+
+        width: 3.5em;
+        height: 2em;
+
+        padding-left: 0.5em;
+
+        &:focus {
+          outline: none;
+          border: 0.02em solid $smokey-grey;
+        }
+
+        &::-webkit-inner-spin-button {
+          appearance: none;
+        }
+
+        &:invalid {
+          border: 0.02em solid red;
+        }
+
+      }
+
+      .error {
+        color: red;
+        font-size: 0.8em;
+        position: relative;
+      }
+
+    }
+
+  }
+
+  .radio {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    hr {
+      width: 100%;
+      height: 0.1em;
+      background-color: $light-grey;
+      border: 0;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      background-color: $primary-purple;
+      border: 0;
+      border-radius: 50%;
+
+      font-size: 32px;
+      font-weight: bold;
+
+      width: 3.5em;
+      height: 3em;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: $off-black;
+      }
+
+    }
+
+  }
+
+  .result {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: -2em;
+
+    .result-item {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+
+      margin-bottom: -3.5em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p:first-of-type {
+        margin: 0;
+
+        color: $primary-purple;
+        font-size: 6rem;
+        font-weight: bolder;
+        font-style: italic;
+        letter-spacing: 0.6rem;
+
+      }
+
+      p:last-of-type {
+        margin: 0;
+
+        color: $off-black;
+        font-size: 5rem;
+        font-weight: bold;
+        font-style: italic;
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
